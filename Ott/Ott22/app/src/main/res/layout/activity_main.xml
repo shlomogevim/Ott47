@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/holo_green_light"
+        android:onClick="start_Onclick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ottImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mem" />
+
+    <ImageView
+        android:id="@+id/testImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="25dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ottImage"
+        app:srcCompat="@drawable/service_hours" />
+
+
+    <Button
+        android:id="@+id/scaleBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="scale_Onclick"
+        android:text="@string/scale"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/transferBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/holderBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="viewHolder_Onclick"
+        android:text="Holder"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/transferBtn"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/propertyBtn" />
+
+    <Button
+        android:id="@+id/transferBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="transfer_Onclick"
+        android:text="@string/transfer"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rotateBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/scaleBtn" />
+
+    <Button
+        android:id="@+id/propertyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="viewPropertyAnimator_Onclick"
+        android:text="Property"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/rotateBtn"
+        app:layout_constraintStart_toEndOf="@+id/scaleBtn"
+        app:layout_constraintTop_toTopOf="@+id/testBtn" />
+
+    <Button
+        android:id="@+id/rotateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="rotate_Onclick"
+        android:text="@string/rotate"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ahlfaBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/transferBtn" />
+
+    <Button
+        android:id="@+id/testBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="test_Onclick"
+        android:text="Test "
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/setBtn"
+        app:layout_constraintEnd_toStartOf="@+id/ahlfaBtn"
+        app:layout_constraintStart_toEndOf="@+id/transferBtn" />
+
+    <Button
+        android:id="@+id/ahlfaBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ahlfaOn_Onclick"
+        android:text="Alfa"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/rotateBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rotateBtn" />
+
+    <Button
+        android:id="@+id/setBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:onClick="setOn_Onclick"
+        android:text="Set"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/ahlfaBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toEndOf="@+id/rotateBtn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
